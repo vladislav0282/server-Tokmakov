@@ -7,6 +7,7 @@ import user from "./user.js";
 import basket from "./basket.js";
 import rating from "./rating.js";
 import order from "./order.js";
+import transaction from "./transaction.js";
 
 const router = new express.Router();
 
@@ -16,6 +17,7 @@ router.use("/brand", brand);
 router.use("/user", user);
 router.use("/basket", basket);
 router.use("/rating", rating);
-router.use("/order", rating);
+router.use("/order", order);
+router.use("/transaction", transaction);
 
 export default router;

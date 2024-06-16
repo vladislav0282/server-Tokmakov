@@ -15,6 +15,14 @@ const User = sequelize.define("user", {
   role: { type: DataTypes.STRING, defaultValue: "USER" },
 });
 
+const Transaction = sequelize.define("transaction",{
+  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  title: { type: DataTypes.STRING },
+  amount: { type: DataTypes.INTEGER},
+  type: { type: DataTypes.STRING },
+  category: { type: DataTypes.INTEGER},
+})
+
 // модель «Корзина», таблица БД «baskets»
 const Basket = sequelize.define("basket", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -169,4 +177,5 @@ export {
   ProductProp,
   Order,
   OrderItem,
+  Transaction
 };

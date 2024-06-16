@@ -10,19 +10,19 @@ router.get("/getone/:id([0-9]+)", CategoryController.getOne);
 router.post(
   "/create",
   authMiddleware,
-  adminMiddleware,
+  // adminMiddleware,
   CategoryController.create
 );
 router.put(
   "/update/:id([0-9]+)",
   authMiddleware,
-  adminMiddleware,
+  // adminMiddleware,
   CategoryController.update
 );
 router.delete(
   "/delete/:id([0-9]+)",
   authMiddleware,
-  adminMiddleware,
+  // adminMiddleware,
   CategoryController.delete
 );
 
